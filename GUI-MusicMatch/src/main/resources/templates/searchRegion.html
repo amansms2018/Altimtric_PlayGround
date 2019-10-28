@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html
+        lang="en"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{public/layouts/master-page-layout}">
+<head>
+    <title>  please add the title of the page</title>
+</head>
+<body>
+<th:block layout:fragment="content">
+    <br>
+    <br>
+    <div class="content">
+
+        <div class="tab-content">
+            <form method="GET" action="/api/track/top">
+                Country Name: <input type="text" name="country"/> <br/>
+                <input type="submit" value="Search" class ="btn btn-info col-2"/>
+            </form>
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+
+</th:block>
+<br/>
+<th:block layout:fragment="footer"/>
+</body>
+</html>

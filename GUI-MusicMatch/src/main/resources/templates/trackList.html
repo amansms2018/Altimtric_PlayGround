@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html
+        lang="en"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{public/layouts/master-page-layout}">
+<head>
+    <title>  please add the title of the page</title>
+</head>
+
+
+<body id="page1">
+<div class="main">
+
+<th:block layout:fragment="content">
+
+    <div class="container">
+        <h3>ToP Music selcted by a country </h3>
+        <hr/>
+<!--        <a  href="/api/track/top/">-->
+        <div style="font-size: 1em">
+
+<!--            <form action="/transactionsList" th:object="${topTrack}" method="GET">-->
+
+            <form action="/trackList" th:object="${topTrack}" method="GET">
+
+                <table id="t01" border="1" width="70%" cellpadding="2">
+                    <tr>
+                        <th> Track Name </th>
+                        <th>artist</th>
+                        <th>listeners</th>
+                        <th>lyrics</th>
+
+                    </tr>
+                    <tr>
+                        <td th:text="${topTrack.getName()}"></td>
+                        <td th:text="${topTrack.getArtist().getName()}"></td>
+                        <td th:text="${topTrack.getListeners()}"></td>
+                        <td th:text="${topTrack.getLyrics()}"></td>
+
+                    </tr>
+                </table>
+                <br/>
+            </form>
+
+        </div>
+    </div>
+
+</th:block>
+
+<br/>
+
+
+<th:block layout:fragment="footer"/>
+
+</div>
+
+</body>
+</html>

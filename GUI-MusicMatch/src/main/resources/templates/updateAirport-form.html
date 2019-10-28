@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html
+		lang="en"
+		xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+		layout:decorate="~{public/layouts/master-page-layout}">
+<head>
+	<title>  please add the title of the page</title>
+
+</head>
+
+
+<body id="page1">
+<div class="main">
+
+
+	<!--onload="document.querySelector('#productNumber').focus();"-->
+	<th:block layout:fragment="content">
+		<!--        <form id="productForm" method="post" action="/srm/secured/product/new" th:object="${product}">-->
+
+		<div class = "container">
+
+			<h3>Form For Adding New Airplane</h3>
+<!--			<p class="h4 mb-4">Save Airport</p>-->
+
+			<form action="#" th:action="@{/saveAirport}"  th:object="${airport}" method="POST">
+
+				<!--			<input type="hidden" th:field= "*{id}">-->
+
+				<input type ="text" th:field ="*{id}"
+					   class = "form-control mb-4 col-4"  placeholder =" Airport Id">
+
+
+				<label> Airprt Code : </label>  <input type ="text" th:field ="*{airportCode}"
+													   class = "form-control mb-4 col-4"  placeholder =" airport Code ">
+
+				<label> Airprt Name : </label>  <input type ="text" th:field ="*{airportName}"
+													   class = "form-control mb-4 col-4"  placeholder =" airportName  Name ">
+
+
+				<label> Airprt City : </label>  <input type ="text" th:field ="*{city}"
+													   class = "form-control mb-4 col-4"  placeholder =" City  Name ">
+
+				<label>  Country : </label>  <input type ="text" th:field ="*{country}"
+													class = "form-control mb-4 col-4"  placeholder ="  Country  Name ">
+
+				<button type = "submit" class ="btn btn-info col-2"> Update</button>
+
+
+<!--				<td>-->
+<!--					<button type="submit" class="btn btn-info col-2">Save</button></td>-->
+<!--				</tr>-->
+			</form>
+			<tr>
+				<td>
+					<a th:href="@{/list}">Back to Airport List</a>
+				</td>
+			</tr>
+		</div>
+
+	</th:block>
+	<br/>
+	<th:block layout:fragment="footer"/>
+</div>
+
+</body>
+</html>
+

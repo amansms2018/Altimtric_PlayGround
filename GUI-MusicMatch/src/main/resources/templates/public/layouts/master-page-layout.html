@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" >
+<head>
+    <title> XYZ AirLines</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
+    <script type="text/javascript" src="../js/jquery-1.5.2.js" ></script>
+    <script type="text/javascript" src="../js/cufon-yui.js"></script>
+    <script type="text/javascript" src="../js/cufon-replace.js"></script>
+    <script type="text/javascript" src="../js/Cabin_400.font.js"></script>
+    <script type="text/javascript" src="../js/tabs.js"></script>
+    <script type="text/javascript" src="../js/jquery.jqtransform.js" ></script>
+    <script type="text/javascript" src="../js/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript" src="../js/atooltip.jquery.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="book.html.js/html5.js"></script>
+    <style type="text/css">.main, .tabs ul.nav a, .content, .button1, .box1, .top { behavior:url("../js/PIE.htc")}</style>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-EmRcsPP774S9MOi4ywB+JXUWjYnBdyInMzG2XsC5siZEUpexqxOMJW358dCYEjPu" crossorigin="anonymous">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/cerulean/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EmRcsPP774S9MOi4ywB+JXUWjYnBdyInMzG2XsC5siZEUpexqxOMJW358dCYEjPu" crossorigin="anonymous">
+    <!--    <link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">-->
+    <title>eLibrary - a demo spring boot webapp</title>
+</head>
+
+
+<body id="page1">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a style="padding-right: 2em;" class="navbar-brand" href="/about"> MusicMatch Magangemet System
+    </a>
+    <!--<span style="color: #ffffff;"> &nbsp; | &nbsp;</span>-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+
+            <li class="nav-item" style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
+                <a class="nav-link" href="/api/track/top/searchForm"> Search Track </a>
+            </li>
+
+            <li class="nav-item" style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
+                <a class="nav-link" href="/api/track/top"> Top Track </a>
+            </li>
+            <li class="nav-item" style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">
+                <a class="nav-link" href="/api/track/artist"> Artist </a>
+            </li>
+
+
+
+            <!--            <li class="nav-item" style="border-left: white 1px solid; padding-left: 2em; padding-right: 2em;">-->
+<!--                <a class="nav-link" href="/"> Articist </a>-->
+<!--            </li>-->
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <!--<input class="form-control mr-sm-2" type="text" placeholder="Search">-->
+            <!--<a style="color: #ffffff; margin-right: 0em;" class="nav-link" href="#">John Doe</a>-->
+            <!--<a href="#" class="btn btn-secondary">Sign In</a>-->
+        </form>
+    </div>
+</nav>
+
+<div class="main">
+    <!--header -->
+<!--    <header>-->
+<!--        <div class="wrapper">-->
+<!--            <h1><a href="/" id="logo"> XYZ AirLines</a></h1>-->
+<!--            <span id="slogan">Fast, Frequent &amp; Safe Flights</span>-->
+<!--&lt;!&ndash;            <nav id="top_nav">&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="/" class="nav1">Home</a></li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a th:href="@{/logout}" class="nav2">Sign out</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;                    <a th:href="@{/logout}">Sign out</a>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="/contact" class="nav3">Contact</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            </nav>&ndash;&gt;-->
+<!--        </div>-->
+<!--&lt;!&ndash;        <nav>&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul id="menu">&ndash;&gt;-->
+<!--&lt;!&ndash;                <li ><a href="/airport/list" ><span><span>Airport</span></span></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li class="end"><a href="/list"><span><span>Plane</span></span></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li class="end"><a href="/admin/schueduleList"> <span> <span>Schuedule</span></span></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li class="end"><a href="/chart"><span><span>Report</span></span></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        </nav>&ndash;&gt;-->
+<!--    </header>-->
+
+    <div class="wrapper pad1">
+
+
+        <div class="container">
+            <!--Thymeleaf placeholder for the page Content-->
+            <th:block layout:fragment="content">
+
+
+
+            </th:block>
+            <!--End placeholder-->
+        </div>
+
+    </div>
+
+
+<!--Thymeleaf placeholder for additional footer content-->
+<th:block layout:fragment="footer">
+
+    <div class="container">
+
+        <div class="wrapper">
+            <!--                <ul id="icons">-->
+            <!--                    <li><a href="#" class="normaltip"><img src="images/icon1.jpg" alt=""></a></li>-->
+            <!--                    <li><a href="#" class="normaltip"><img src="images/icon4.jpg" alt=""></a></li>-->
+            <!--                    <li><a href="#" class="normaltip"><img src="images/icon5.jpg" alt=""></a></li>-->
+            <!--                </ul>-->
+            <!--                <div >  Designed by: Amanuel, Robel and Brhane-->
+            <!--                    </p>-->
+            <!--                </div>-->
+        </div>
+    </div>
+
+</th:block>
+<!--End placeholder-->
+
+
+<!--<footer class="footer">-->
+<!--    <div class="container">-->
+
+<!--            <div class="wrapper">-->
+<!--&lt;!&ndash;                <ul id="icons">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="#" class="normaltip"><img src="images/icon1.jpg" alt=""></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="#" class="normaltip"><img src="images/icon4.jpg" alt=""></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="#" class="normaltip"><img src="images/icon5.jpg" alt=""></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div >  Designed by: Amanuel, Robel and Brhane&ndash;&gt;-->
+<!--&lt;!&ndash;                    </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            </div>-->
+<!--    </div>-->
+<!--</footer>-->
+
+
+
+<!--///////-->
+</div>
+
+</body>
+</html>
